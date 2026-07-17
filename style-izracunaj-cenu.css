@@ -1,0 +1,475 @@
+:root {
+    --main-color: #0A0E27;
+    --paper: #F4F2EC;
+    --steel: #929AAE;
+    --glass: #BFE3F0;
+    --brass: #B8924A;
+    --navy-1: #0F1E45;
+    --navy-2: #1B3B7A;
+    --charcoal: #1A1D29;
+    --line: rgba(10, 14, 39, 0.14);
+    --line-paper: rgba(244, 242, 236, 0.18);
+}
+
+.price-calculations{
+    padding:120px 0;
+}
+
+.price-calculations .heading{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.price-calculations .heading h3{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    color: var(--navy-2);
+    font-size:1.125rem;
+    font-family: 'Manrope',sans-serif;
+}
+
+.price-calculations .heading h3::before{
+    content:"";
+    width:30px;
+    height: 2px;
+    background-color:var(--brass);
+    font-weight:400;
+}
+
+.price-calculations .heading h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.001rem;
+    text-transform: uppercase;
+}
+
+.price-calculations .heading p{
+    font-size: 1.3rem;
+    max-width: 660px;
+    line-height: 1.65;
+    color: var(--charcoal);
+    font-family: 'Manrope', sans-serif;
+}
+
+.calculator{
+    margin-top: 80px;
+    display: flex;
+    gap:50px;
+    align-items:center;
+
+
+}
+
+.calculator .left-side{
+    flex-basis:60%;
+    display: flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.calculator .left-side .proizvodi{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.calculator .left-side .proizvodi .grid-selection{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    border:1px solid var(--navy-1);
+}
+
+.calculator .left-side .proizvodi .grid-selection .grid-selection-card{
+    border:1px solid var(--navy-1);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    transition: 0.3s;
+    font-family:'Manrope',sans-serif;
+    background-color:var(--paper) ;
+}
+
+.calculator .left-side .proizvodi .grid-selection .grid-selection-card:hover{ 
+    cursor: pointer;
+    
+}
+
+
+
+.card-number{
+    color:var(--steel);
+    font-family:'Manrope',sans-serif;
+    text-transform:uppercase;
+}
+
+.card-number span{
+    color: var(--brass);
+    font-size: 0.9rem;
+}
+
+.card-name{
+    font-size:1.6rem;
+    text-transform:uppercase;
+}
+
+
+
+.grid-selection .grid-selection-card p{
+    color: var(--steel);
+}
+
+.grid-selection .grid-selection-card h5{
+    font-size:1.225rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    font-family:'Manrope', sans-serif;
+}
+
+.input .input-grid{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 30px;
+}
+
+.input .input-grid .input-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width:80%;
+}
+
+.input-wrapper label{
+    
+    color: var(--charcoal);
+    font-weight: 600;
+}
+
+.input-wrapper input{
+    font-weight:500;
+    font-size: 1.125rem;
+    padding: 10px 20px;
+}
+
+.input-wrapper input:focus{
+    border:2px solid var(--brass);
+    outline: var(--brass);
+}
+
+.input select {
+   font-size: 1.125rem;
+    padding:10px 25px;
+    color: var(--charcoal);
+}
+
+.input select:focus{
+    border:1px solid var(--brass);
+    outline: var(--brass);
+}
+
+.input .montaza-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:15px 25px;
+    border:1px solid var(--brass);
+}
+
+.input .montaza-div .button-div{
+    width:100px;
+    height:50px;
+    border:1px solid var(--steel);
+    border-radius: 40px;
+    position: relative;
+}
+
+.button-div_da{
+    width:100px;
+    height:50px;
+    border:1px solid green;
+    border-radius: 40px;
+    position: relative;
+}
+
+.input .montaza-div .button-div::after{
+    content:"";
+    width:50px;
+    
+    border-radius:50%;
+    position: absolute;
+
+    top:0;
+    bottom:0;
+    
+    left:0;
+    background-color: var(--steel);
+    transition: 0.3s ease;
+}
+
+.button-div_da::after{
+    content:"";
+    width:50px;
+    
+    border-radius:50%;
+    position: absolute;
+
+   
+    top:0;
+    bottom:0;
+    
+    right:0;
+    background-color: var(--steel);
+    background-color: rgba(53, 217, 53, 0.922);
+    transition: 0.1s ease;
+
+}
+
+.input .montaza-div .button-div:hover::after, .button-div_da::after{
+    cursor: pointer;
+}
+
+.price-for-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:20px;
+    font-family:'Manrope', sans-serif;
+}
+
+.price-for-item .amount-calc{
+    display: flex;
+    border:1px solid var(--brass);
+    background-color: var(--paper);
+}
+
+.price-for-item .amount-calc div{
+    padding:10px 20px;
+    
+}
+.cursor-p{
+    cursor: pointer;
+}
+
+.amount{
+    background-color:var(--brass);
+    color:black;
+    cursor:default;
+}
+
+
+#addToCart{
+    
+    padding: 15px 25px;
+    border:none;
+    color: var(--paper);
+    background-color: var(--main-color);
+    font-size: 1.125rem;
+    transition:0.3;
+}
+
+#addToCart:hover{
+    cursor: pointer;
+    background-color: var(--navy-2);
+}
+
+
+.right-side{
+    
+    border:1px solid #d4af6c5c;
+    border-radius:35px;
+    flex-basis:40%;
+    font-family:'Manrope',sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height:500px;
+    padding:35px 30px;
+
+    -webkit-box-shadow: 0px 0px 35px 15px rgba(0,0,0,0.58); 
+    box-shadow: 0px 0px 40px 10px rgba(0,0,0,0.18);
+
+}
+
+.list-items{
+    min-height: 200px;
+    width:100%;
+    border:1px solid var(--brass);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.final-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.right-side >p{
+    font-size: 1.4rem;
+    font-weight:600;
+}
+.bottom-part >p{
+    color:var(--steel);
+}
+.bottom-part .final-price{
+    font-size:1.4rem ;
+}
+
+#totalPrice::after{
+    content:"€";
+}
+
+
+/*------------------------------------*/
+
+.item{
+    padding:15px 25px;
+    background-color:#c09e60;
+    width:100%;
+    border-bottom:1px solid var(--charcoal);
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-div-cart-price{
+   display: flex;
+   align-items: center;
+   gap:15px;
+}
+
+.x-btn{
+    color:rgb(183, 6, 6);
+    font-size:1.1rem;
+}
+
+.x-btn:hover{
+    cursor: pointer;
+}
+
+.price-item{
+    font-family:'Manrope', sans-serif;
+    color: var(--navy-1);
+}
+
+.visna-sirina-montaza{
+    font-size: 0.72rem;
+}
+
+.proizvod-boja-kolicina{
+    font-family:'Manrope', sans-serif;
+    font-size: 0.9rem;
+}
+
+@media (max-width:1024px) {
+    .calculator{
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .price-calculations .heading h1{
+        font-size: 3.5rem;
+    }
+
+    .price-calculations .heading p{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width:767px) {
+    .price-calculations .heading h1{
+        font-size: 3.2rem;
+    }
+
+    .price-calculations .heading p{
+        font-size: 0.95rem;
+    }
+
+
+    .montaza-content h2{
+        font-size:1rem;
+    }
+
+    .montaza-content p{
+        font-size: 0.78rem;
+        
+    }
+
+
+    
+}
+
+@media (max-width:550px){
+    .calculator .left-side .proizvodi .grid-selection{
+        grid-template-columns:1fr;
+    }
+
+    .input .input-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .input .input-grid .input-wrapper{
+        width:100%;
+    }
+
+    .price-calculations .heading h3{
+        font-size:1rem;
+    }
+
+    
+    .montaza-content{
+        text-align: center;
+    }
+    .input .montaza-div{
+        flex-direction: column;
+        justify-content: center;
+        gap:30px;
+    }
+
+    .right-side >p{
+        font-size: 1rem;
+    }
+
+    .bottom-part >p{
+        font-size:0.9rem;
+    }
+
+    .final-price {
+        font-size: 0.9rem;
+    }
+
+
+    .item-div-cart-price{
+        width:100%;
+        justify-content: space-between;
+    }
+    
+    .visna-sirina-montaza{
+        font-size:0.7rem;
+    }
+    .item{
+        padding: 15px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px
+    }
+    .list-items >p{
+        font-size: 0.8rem;
+        max-width:70%;
+        text-align: center;
+    }
+}

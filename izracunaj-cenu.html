@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buca PVC</title>
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style-izracunaj-cenu.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="header-wrapper">
+                    
+                    <a class="logo-wrapper" href="index.html">
+                        <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs><linearGradient id="navyGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#1B3B7A"></stop><stop offset="1" stop-color="#0A1530"></stop>
+                            </linearGradient></defs>
+                            <rect width="100" height="100" fill="url(#navyGrad)"></rect>
+                            <rect x="10" y="10" width="36" height="36" fill="none" stroke="#F4F2EC" stroke-width="3"></rect>
+                            <rect x="54" y="10" width="36" height="36" fill="none" stroke="#F4F2EC" stroke-width="3"></rect>
+                            <rect x="10" y="54" width="36" height="36" fill="none" stroke="#F4F2EC" stroke-width="3"></rect>
+                            <rect x="54" y="54" width="36" height="36" fill="none" stroke="#F4F2EC" stroke-width="3"></rect>
+                        </svg>
+
+                        <span>Bu<span class="span-c">c</span>a</span>
+                    </a>
+                    
+                    <nav class="nav">
+                        <a href="index.html">Pocetna</a>
+                        <a href="index.html#proizvodi">Proizvodi</a>
+                        <a href="index.html#put">Put do montaze</a>
+                        <a href="index.html#galerija">Realizacije</a>
+                        <a href="#" class="cta-button">Izračunaj cenu</a>
+                    </nav>
+
+
+
+                    <nav class="responisve-menu">
+                        <a href="index.html">Pocetna</a>
+                        <a href="index.html#proizvodi">Proizvodi</a>
+                        <a href="index.html#put">Put do montaze</a>
+                        <a href="index.html#galerija">Realizacije</a>
+                        <a href="#" class="cta-button">Izračunaj cenu</a>
+                    </nav>
+
+                    <div id="burger-btn" class="mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="price-calculations">
+            <div class="container">
+                <div class="heading">
+                    <h3>Procena okvirne cene</h3>
+                    <h1>Izračunaj cenu <br> svoje stolarije</h1>
+                    <p>Izaberi proizvod, unesi mere otvora i dodaj u porudžbinu — možeš kombinovati prozore, vrata, roletne i komarnike u istom upitu. Cena je okvirna, konačnu dobijaš posle merenja na terenu.</p>   
+                </div>
+
+                <div class="calculator">
+                    <div class="left-side">
+                        <div class="proizvodi">
+                            <p class="card-number">01 / <span>IZABERI PROIZVOD</span></p>
+                            <h4 class="card-name">Šta ti treba?</h4>
+
+                            <div class="grid-selection">
+                                <div class="grid-selection-card">
+                                    <p>01</p>
+                                    <h5>Prozor</h5>
+                                    <p>od 190 €/m²</p>
+                                </div>
+
+                                <div class="grid-selection-card">
+                                    <p>02</p>
+                                    <h5>Vrata</h5>
+                                    <p>od 310 €/m²</p>
+                                </div>
+                                
+                                <div class="grid-selection-card">
+                                    <p>03</p>
+                                    <h5>Roletna</h5>
+                                    <p>od 100 €/m²</p>
+                                </div>
+
+                                <div class="grid-selection-card">
+                                    <p>04</p>
+                                    <h5>Komarnik</h5>
+                                    <p>od 45 €/m²</p>
+                                </div>
+
+
+                            </div>
+    
+                        </div>
+
+
+                        <div class="input">
+                            <p class="card-number">02 / <span>UNESI MERE</span></p>
+                            <h4 class="card-name">Dimenzije otvora</h4>
+
+                            <div class="input-grid">
+                                <div class="input-wrapper">
+                                    <label>Visina(mm)</label>
+                                    <input type="number" id="visina" value="1200">
+                                </div>
+
+                                <div class="input-wrapper">
+                                    <label>Sirina(mm)</label>
+                                    <input type="number" id="sirina" value="1200">
+                                </div>
+
+                                 <div class="input-wrapper">
+                                    <label for="">Boja profila</label>
+                                    <select>
+                                        <option value="bela">Bela</option>
+                                        <option value="antracit">Antracit</option>
+                                        <option value="hrast">Hrast</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="montaza-div">
+                                <div class="montaza-content">
+                                    <h2>Ugradnja u cenu</h2>
+                                    <p>Montaža, demontaža stare stolarije i odvoz šuta</p>
+                                </div>
+                                <div class="button-div">
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="price-for-item">
+                            <p class="card-number">03 / <span>KOLIČINA</span></p>
+                            
+                            <div class="amount-calc">
+                                <div class="cursor-p">-</div>
+                                <div class="amount">1</div>
+                                <div class="cursor-p">+</div>
+                            </div>
+
+                            <p id="cena-proizvod"></p>
+                            
+                            <button id="addToCart">+ Dodaj u porudzbinu</button>
+
+                        </div>
+                    </div>
+
+                    <div class="right-side">
+                        <p>Tvoja porudzbina</p>
+                        <div class="list-items">
+                            <p>Niste dodali nijedan proizvod</p>
+                        </div>
+
+                        <div class="bottom-part">
+                            <div class="final-price">
+                                <p>Ukupno</p>
+                                <p id="totalPrice">0</p>
+                            </div>
+                            
+                            <p>* Cena je informativnog karaktera i zavisi od tačnog merenja na licu mesta. Konačnu ponudu dobijaš u roku od 24h od slanja upita.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+       <footer id="footer">
+            <div class="container">
+                    
+                        <div class="footer-top">
+                            <div class="footer-top-left">
+                                <h1>Merimo<br>besplatno.</h1>
+                                <p>Ostavite osnovne podatke o otvorima koje planirate da menjate — javljamo se sa terminom besplatne mere u toku 24h.</p>
+
+                                <div class="contact-links">
+                                    <div class="link">
+                                        <p>Telefon</p>
+                                        <a href="tel:+381601234567" target="_blank">0112555333</a>
+                                    </div>
+
+                                    <div class="link">
+                                        <p>E-mail</p>
+                                        <a href="mailto:info@buca.rs" target="_blank">info@buca.rs</a>
+                                    </div>
+
+                                    <div class="link">
+                                        <p>Radionica</p>
+                                        <a href="https://maps.app.goo.gl/UCkufoFmbmgvDMsP6" target="_blank">Obrenovac, Srbija</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="footer-top-input-field">
+                                <form action="">
+                                    <div class="input-div">
+                                        <label>Ime i prezime</label>
+                                        <input type="text" placeholder="Petar Petrovic" name="ime_prezime"> 
+                                    </div>
+
+                                    <div class="input-div">
+                                        <label>Telefon</label>
+                                        <input type="tel" placeholder="+3816XXXXXXXX" name="telefon"> 
+                                    </div>
+
+                                    <div class="input-div">
+                                        <label>Email</label>
+                                        <input type="email" placeholder="primer@gmail.com" name="email"> 
+                                    </div>
+
+
+                                    <div class="input-div">
+                                        <textarea placeholder="Sta vas interesuje?"></textarea> 
+                                    </div>
+
+                                    <button id="submit-btn" type="submit">Posalji</button>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div class="footer-bottom">
+                            <nav>
+                                <a href="index.html#proizvodi">Proizvodi</a>
+                                <a href="index.html#put">Put do montaže</a>
+                                <a href="index.html#galerija">Realizacije</a>
+                            </nav>
+
+                            <p> &#169; 2026 BUCA PVC stolarija. Sva prava zadržana.</p>
+                        </div>
+                    
+            </div>
+
+        </footer>
+        <script src="common.js"></script>
+        <script src="script-izracunaj-cenu.js"></script>
+    </body>
+</html>
